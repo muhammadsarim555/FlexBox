@@ -29,31 +29,43 @@ const {width, height} = Dimensions.get('window');
 const App: () => React$Node = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, backgroundColor: 'orange'}}></View>
-      <View style={{flex: 8, justifyContent: 'center'}}>
+      <View style={{backgroundColor: 'orange'}}>
+        <Text style={{padding: 15, fontSize: 16}}>Header</Text>
+      </View>
+      <View style={{flex: 1, justifyContent: 'center'}}>
         <View
           style={{
-            height: height * 0.7,
+            flex: 1,
             backgroundColor: 'pink',
-            alignItems: 'center',
-            justifyContent: 'space-around',
+            // alignItems: 'center',
+            // justifyContent: 'space-around',
           }}>
           <View
             style={{
-              width: width * 0.3,
-              height: height * 0.2,
-              borderRadius: 60,
-              backgroundColor: 'blue',
-            }}></View>
+              flex: 2,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <View
+              style={{backgroundColor: 'blue', padding: 70, borderRadius: 50}}
+            />
+          </View>
           <View
             style={{
-              width: width * 0.7,
-              height: height * 0.4,
-              backgroundColor: 'green',
-            }}></View>
+              flex: 3,
+              padding: 20,
+              paddingRight: 40,
+              paddingLeft: 40,
+              // alignItems: 'center',
+              // justifyContent: 'center',
+            }}>
+            <View style={{backgroundColor: 'red', flex: 1}} />
+          </View>
         </View>
       </View>
-      <View style={{flex: 1, backgroundColor: 'purple'}}></View>
+      <View style={{backgroundColor: 'orange'}}>
+        <Text style={{padding: 15, fontSize: 16}}>Footer</Text>
+      </View>
     </View>
   );
 };
