@@ -29,47 +29,52 @@ const {width, height} = Dimensions.get('window');
 const App: () => React$Node = () => {
   return (
     <View style={{flex: 1}}>
-      <View
-        style={{
-          backgroundColor: 'orange',
-        }}>
-        <Text style={{fontSize: 16, padding: 15}}>Header</Text>
-      </View>
-      <View style={{flex: 10, justifyContent: 'center'}}>
+      <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <View
           style={{
-            flex: 1,
-            backgroundColor: 'pink',
+            backgroundColor: 'orange',
           }}>
+          <Text style={{fontSize: 16, padding: 60}}>Header</Text>
+        </View>
+        <View style={{flex: 1, justifyContent: 'center'}}>
           <View
             style={{
-              flex: 2,
-              alignItems: 'center',
-              justifyContent: 'center',
+              flex: 1,
             }}>
-            <View
-              style={{backgroundColor: 'blue', padding: 70, borderRadius: 50}}
-            />
-          </View>
-          <View
-            style={{
-              flex: 3,
-            }}>
-            <View style={{backgroundColor: 'red', margin: 20}}>
-              <TextInput />
-            </View>
-            <View
-              style={{backgroundColor: 'yellow', flex: 1, margin: 20}}></View>
+            {[
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              3,
+              4,
+              5,
+              6,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+            ].map((v) => (
+              <View
+                style={{
+                  padding: 70,
+                  backgroundColor: 'red',
+                  margin: 30,
+                }}></View>
+            ))}
           </View>
         </View>
-      </View>
-
-      <View
-        style={{
-          backgroundColor: 'orange',
-        }}>
-        <Text style={{fontSize: 16, padding: 15}}>Footer</Text>
-      </View>
+      </ScrollView>
     </View>
   );
 };
